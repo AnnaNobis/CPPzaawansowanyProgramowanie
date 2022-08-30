@@ -21,14 +21,12 @@ int commonLetters(std::string s1, std::string s2)
   {
       if (std::find(s2.begin(), s2.end(), *i) != s2.end())
       {
-          count++;
-        
-      }  
-      return count;
-
-  }
- std::cout << "liczba wspólnych liter to: " << count << " times";
+         count++;
     
+      }  
+  } 
+     
+  return count;
 }
 
 
@@ -39,7 +37,9 @@ int main()
     reverseString("Sprawdzam!");
 
     //Zad2
-    commonLetters("auto", "ala");
+    std::cout << "liczba wspólnych liter to: " << commonLetters("auto", "ala")<< std::endl;
+   std::cout << "liczba wspólnych liter to: " <<  commonLetters("auto", "automat")<< std::endl;
+
 
 
 
