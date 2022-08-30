@@ -15,6 +15,12 @@
 class StringConverter
 {
 	public:
+
+		bool isBigLetter (char c)
+		{
+			return (c >= 65 && c <= 90);
+		}
+
 		std::string toCamelCase(std::string snake_case)
 		{
 			std::vector <char> newString;
@@ -26,8 +32,7 @@ class StringConverter
 
 		std::string toCamelCase2(std::string snake_case)
 		{
-		
-			remove_if(snake_case.begin(), snake_case.end(),'_');
+			snake_case.erase(std::remove(snake_case.begin(), snake_case.end(), '_'), snake_case.end());
 			std::cout << snake_case << '\n';
 			return snake_case;
 		}
@@ -35,9 +40,23 @@ class StringConverter
 	
 	std::string toSnakeCase(std::string camelCase)
 	{
-	
-	};
+		std::string newString;
 
+		for (auto it = camelCase.begin(); it != camelCase.end(); ++it)
+		{
+			if (isBigLetter(*it))
+			{
+				newString.push_back('_');
+				newString.push_back (tolower(*it));
+			
+			}
+			else
+			{
+				newString.push_back(*it);
+			}
+		}
+		return newString;
+	}
 };
 
 
