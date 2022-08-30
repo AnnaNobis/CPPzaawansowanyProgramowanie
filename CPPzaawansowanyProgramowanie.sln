@@ -12,6 +12,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Zadanie3_StringConverter", "Zadanie3_StringConverter\Zadanie3_StringConverter.vcxproj", "{055208F7-925A-4526-AC35-5A780FC45DBE}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Zadanie4_MorseCodeTranslator", "Zadanie4_MorseCodeTranslator\Zadanie4_MorseCodeTranslator.vcxproj", "{A2E1B095-7AF0-42C7-B8E1-B603F0433E64}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -36,6 +38,14 @@ Global
 		{055208F7-925A-4526-AC35-5A780FC45DBE}.Release|x64.Build.0 = Release|x64
 		{055208F7-925A-4526-AC35-5A780FC45DBE}.Release|x86.ActiveCfg = Release|Win32
 		{055208F7-925A-4526-AC35-5A780FC45DBE}.Release|x86.Build.0 = Release|Win32
+		{A2E1B095-7AF0-42C7-B8E1-B603F0433E64}.Debug|x64.ActiveCfg = Debug|x64
+		{A2E1B095-7AF0-42C7-B8E1-B603F0433E64}.Debug|x64.Build.0 = Debug|x64
+		{A2E1B095-7AF0-42C7-B8E1-B603F0433E64}.Debug|x86.ActiveCfg = Debug|Win32
+		{A2E1B095-7AF0-42C7-B8E1-B603F0433E64}.Debug|x86.Build.0 = Debug|Win32
+		{A2E1B095-7AF0-42C7-B8E1-B603F0433E64}.Release|x64.ActiveCfg = Release|x64
+		{A2E1B095-7AF0-42C7-B8E1-B603F0433E64}.Release|x64.Build.0 = Release|x64
+		{A2E1B095-7AF0-42C7-B8E1-B603F0433E64}.Release|x86.ActiveCfg = Release|Win32
+		{A2E1B095-7AF0-42C7-B8E1-B603F0433E64}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
