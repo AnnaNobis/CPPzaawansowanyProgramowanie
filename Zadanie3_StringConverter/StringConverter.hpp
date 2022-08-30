@@ -23,6 +23,15 @@ class StringConverter
 			std::cout << snake_case << '\n';
 			return snake_case;
 		}
+
+		std::string toCamelCase2(std::string snake_case)
+		{
+		
+			remove_if(snake_case.begin(), snake_case.end(),'_');
+			std::cout << snake_case << '\n';
+			return snake_case;
+		}
+
 	
 	std::string toSnakeCase(std::string camelCase)
 	{

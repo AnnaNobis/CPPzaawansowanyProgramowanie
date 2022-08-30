@@ -7,7 +7,7 @@
 int main()
 {
     StringConverter conv;
-    std::cout << conv.toCamelCase("hello_S_D_A");
+    std::cout << conv.toCamelCase2("hello_S_D_A");
 
 
 }
