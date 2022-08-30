@@ -2,8 +2,13 @@
 //
 
 #include <iostream>
+#include "StringConverter.hpp"
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    StringConverter conv;
+    std::cout << conv.toCamelCase("hello_S_D_A");
+
+
 }
+

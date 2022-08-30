@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include <vector>
 
 //Zadanie 3
 //Napisz klasê StringConverter, która bedzie mia³a dwie metody(statyczne) :
@@ -13,15 +14,21 @@
 
 class StringConverter
 {
-	std::string toCamelCase(std::string s)
+	public:
+		std::string toCamelCase(std::string snake_case)
+		{
+			std::vector <char> newString;
+
+			snake_case.erase(remove_if(snake_case.begin(), snake_case.end(), [](unsigned char x) {return '_'; }), snake_case.end());
+			std::cout << snake_case << '\n';
+			return snake_case;
+		}
+	
+	std::string toSnakeCase(std::string camelCase)
 	{
-
-	};
-
-	std::string toSnakeCase(std::string s)
-	{
-
+	
 	};
 
 };
+
 
