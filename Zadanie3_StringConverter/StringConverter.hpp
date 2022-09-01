@@ -21,14 +21,6 @@ class StringConverter
 			return (c >= 65 && c <= 90);
 		}
 
-		std::string toCamelCase(std::string snake_case)
-		{
-			std::vector <char> newString;
-
-			snake_case.erase(remove_if(snake_case.begin(), snake_case.end(), [](unsigned char x) {return '_'; }), snake_case.end());
-			std::cout << snake_case << '\n';
-			return snake_case;
-		}
 
 		std::string toCamelCase2(std::string snake_case)
 		{
