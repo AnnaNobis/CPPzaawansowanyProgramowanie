@@ -18,6 +18,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Zadanie5_StringCensor", "Za
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Zadanie6", "Zadanie6\Zadanie6.vcxproj", "{EBEC6A56-C713-489C-A308-76F86D67694F}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Zadanie7", "Zadanie7\Zadanie7.vcxproj", "{E7A9CD88-E8E2-47D5-9166-9FDB1C8D39BD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -66,6 +68,14 @@ Global
 		{EBEC6A56-C713-489C-A308-76F86D67694F}.Release|x64.Build.0 = Release|x64
 		{EBEC6A56-C713-489C-A308-76F86D67694F}.Release|x86.ActiveCfg = Release|Win32
 		{EBEC6A56-C713-489C-A308-76F86D67694F}.Release|x86.Build.0 = Release|Win32
+		{E7A9CD88-E8E2-47D5-9166-9FDB1C8D39BD}.Debug|x64.ActiveCfg = Debug|x64
+		{E7A9CD88-E8E2-47D5-9166-9FDB1C8D39BD}.Debug|x64.Build.0 = Debug|x64
+		{E7A9CD88-E8E2-47D5-9166-9FDB1C8D39BD}.Debug|x86.ActiveCfg = Debug|Win32
+		{E7A9CD88-E8E2-47D5-9166-9FDB1C8D39BD}.Debug|x86.Build.0 = Debug|Win32
+		{E7A9CD88-E8E2-47D5-9166-9FDB1C8D39BD}.Release|x64.ActiveCfg = Release|x64
+		{E7A9CD88-E8E2-47D5-9166-9FDB1C8D39BD}.Release|x64.Build.0 = Release|x64
+		{E7A9CD88-E8E2-47D5-9166-9FDB1C8D39BD}.Release|x86.ActiveCfg = Release|Win32
+		{E7A9CD88-E8E2-47D5-9166-9FDB1C8D39BD}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

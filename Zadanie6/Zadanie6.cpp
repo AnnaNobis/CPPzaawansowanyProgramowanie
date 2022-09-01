@@ -42,11 +42,16 @@ for (auto it =firstNumbers.begin(); it != firstNumbers.end(); ++it)
 
 
 std::list<int> notFirstNumbers;
-auto notFirstNumbers = (numbers.remove_if([](int x) {return firstNumbers.find(x); }));
+auto notFirstNumbers = numbers.erase(std::remove_if(numbers.begin(), numbers.end(), [](int x)
+    {
+        return std::find(firstNumbers.begin(), firstNumbers.end(), x); }));
+
 //notFirstNumbers = (numbers.remove_if([](int x) { return n > 10; });
 //std::cout << count2 << " elements greater than 10 were removed\n";
 
-
+//str2.erase(std::remove_if(str2.begin(),
+//    str2.end(),
+//    [](unsigned char x) {return std::isspace(x); }),
 
 
 
