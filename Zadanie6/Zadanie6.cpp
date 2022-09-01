@@ -40,18 +40,19 @@ for (auto it =firstNumbers.begin(); it != firstNumbers.end(); ++it)
     std::cout << *it << "; ";
 }
 
+std::cout << std::endl << std::endl;
 
-std::list<int> notFirstNumbers;
-auto notFirstNumbers = numbers.erase(std::remove_if(numbers.begin(), numbers.end(), [](int x)
-    {
-        return std::find(firstNumbers.begin(), firstNumbers.end(), x); }));
+auto removeFirstNumbers = [firstNumbers](int i) { return firstNumbers.end() != std::find(firstNumbers.begin(), firstNumbers.end(), i); };
+numbers.erase(std::remove_if(numbers.begin(), numbers.end(), removeFirstNumbers), numbers.end());
+std::list<int> notFirstNumbers = numbers;
 
-//notFirstNumbers = (numbers.remove_if([](int x) { return n > 10; });
-//std::cout << count2 << " elements greater than 10 were removed\n";
 
-//str2.erase(std::remove_if(str2.begin(),
-//    str2.end(),
-//    [](unsigned char x) {return std::isspace(x); }),
+for (auto it = notFirstNumbers.begin(); it != notFirstNumbers.end(); ++it)
+{
+    std::cout << *it << "; ";
+}
+
+
 
 
 
