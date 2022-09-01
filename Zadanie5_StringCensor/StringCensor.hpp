@@ -23,8 +23,9 @@ public:
 	std::string censor(std::string s)
 	{
 		//std::replace_if(s.begin(), s.end(), [](char c) {return c == _censoredLettersBox; }, asterisk);
-		std::replace_if(s.begin(), s.end(),_censoredLettersBox, asterisk);
+		std::replace_if(s.begin(), s.end(), [this](char c) {return std::string::npos != _censoredLettersBox.find(c); }, asterisk);
 		std::cout << s << std::endl;
+		return s;
 	};
 
 	
