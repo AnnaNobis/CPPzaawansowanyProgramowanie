@@ -7,66 +7,73 @@
 #include <algorithm>
 
 
+std::list<int> createListWithNumbers(int n)
+{
+    std::list<int> numbers;
+    for (int i = 1; i < n; i++)
+        numbers.push_back(i);
+    return numbers;
+}
+
+void printList(std::list <int> list)
+{
+    for (auto it = list.begin(); it != list.end(); ++it)
+    {
+        std::cout << *it << "; ";
+    }
+    std::cout << std::endl << std::endl;
+}
+
 int main()
 {
+    std::list<int> myList = createListWithNumbers(100);
+    std::cout << std::endl << "Wygenerowane liczby to: " << std::endl;
+    printList(myList);
 
-std::list<int> numbers;
-for (int i = 1; i < 1001; i++)
-    numbers.push_back(i);
+    //tworzê listê liczb pierwszych
+    std::list <int> firstNumbers;
 
+    std::copy_if(myList.begin(), myList.end(), std::back_inserter(firstNumbers),
+        [](int x)
+        {
+            if (x < 2)
+            {
+                return false;
+            }
+            for (int i = 2; i * i <= x; ++i)
+            {
+                if (x % i == 0)	return false;
+            }
+            return true;
+        });
 
-std::cout << "Liczby od 1 do 1000: " << std::endl;
-for (auto it = numbers.begin(); it != numbers.end(); ++it)
-{
-    std::cout << *it << "; ";
-}
-std::cout << std::endl << std::endl;
-
-//tworzê listê liczb pierwszych
-std::list <int> firstNumbers;
-
-std::copy_if(numbers.begin(), numbers.end(), std::back_inserter(firstNumbers),
-    [](int x)
-    { 
-    if (x < 2)
-    return false;
-    for (int i = 2; i * i <= x; ++i)
-    if (x % i == 0)
-    return false;
-    return true; 
-    });
-
-std::cout<<std::endl << "Liczby pierwsze: " << std::endl;
-for (auto it =firstNumbers.begin(); it != firstNumbers.end(); ++it)
-{
-    std::cout << *it << "; ";
-}
-std::cout << std::endl << std::endl;
-
-//tworzê listê nie liczb pierwszych
-auto removeFirstNumbers = [firstNumbers](int i) { return firstNumbers.end() != std::find(firstNumbers.begin(), firstNumbers.end(), i); };
-numbers.erase(std::remove_if(numbers.begin(), numbers.end(), removeFirstNumbers), numbers.end());
-std::list<int> notFirstNumbers = numbers;
-
-//druga wersja - zaprzeczenie lambdy z listy liczb pierwszych (chyba prostsza wersja)
-//std::copy_if(numbers.begin(), numbers.end(), std::back_inserter(notFirstNumbers),
-//    [](int x)
-//
-//  {   if (x < 2)
-//      return true;
-//      for (int i = 2; i * i <= x; ++i)
-//      if (x % i == 0)
-//      return true;
-//      return false; });
-
-std::cout << std::endl << "Liczby nie pierwsze to: " << std::endl;
-
-for (auto it = notFirstNumbers.begin(); it != notFirstNumbers.end(); ++it)
-{
-    std::cout << *it << "; ";
-}
+    std::cout << std::endl << "Liczby pierwsze to: " << std::endl;
+    printList(firstNumbers);
 
 
+    //tworzê listê nie liczb pierwszych
+    auto removeFirstNumbers = [firstNumbers](int i) { return firstNumbers.end() != std::find(firstNumbers.begin(), firstNumbers.end(), i); };
+    myList.erase(std::remove_if(myList.begin(), myList.end(), removeFirstNumbers), myList.end());
+
+    std::list<int> notFirstNumbers = myList;
+
+    std::cout << std::endl << "Liczby nie pierwsze to: " << std::endl;
+    printList(notFirstNumbers);
+
+
+    //druga wersja - zaprzeczenie lambdy z listy liczb pierwszych (chyba prostsza wersja)
+    //std::copy_if(numbers.begin(), numbers.end(), std::back_inserter(notFirstNumbers),
+    //    [](int x)
+    //
+    //  {   if (x < 2)
+    //      {
+    //      return true;
+    //      }
+    //      for (int i = 2; i * i <= x; ++i)
+    //      {
+    //      if (x % i == 0) return true;
+    //      return false;
+    //  });
 
 
 

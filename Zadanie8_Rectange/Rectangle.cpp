@@ -10,5 +10,5 @@ bool Rectangle::isSquare()
 	if (a == b)
 		return true;
 	else
-		false;
+		return false;
 }

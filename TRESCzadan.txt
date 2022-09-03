@@ -98,4 +98,55 @@ forward iterator i reverse_iterator
 insert(iterator, T);
 Uwaga! Napisz testy.
 
+Zadanie 13
+Napisz gre w zgadywanie numeru. Program losuje liczbe z przedzia³u 1-100, a uzytkownik proboje zgadn¹æ. 
+Po kazdej próbie program podpowiada czy liczba jest wiêksza czy mniejsza od podanej przez gracza. Gdy, gracz jest 
+blisko (np +- 3) to program powinien dodatkowo powiadomiæ gracza o tym, ¿e jest blisko. 
+Zadanie mo¿na rozwi¹zac za pomoc¹ jednej klasy GuessTheNumber
 
+Zadanie 14
+Napisz program, który wypisze najbardziej optymalny schemat wydawania reszty dla podanej kwoty. 
+(nomina³y: 200,100,50,20,10,5,2,1,0.50,0.20,0.10,0.05,0.02,0.01)
+
+Zadanie 15
+Napisz program, który zasymuluje rzut monet¹. Wczytaj od uzytkownika ile prób ma zostaæ wygenerowane, a nastêpnie wypisz:
+- wszystkie wylosowane wartoœci (w postaci ORRORORORRROOORRORO), po 20 wartoœci na 1 wiersz
+- iloœæ wylosowanych or³ów i reszek wraz z ich procentowym udzia³em
+- najdlu¿szy ci¹g samych or³ów i samych reszek, wraz z ich d³ugoœciami i od której próby siê zacz¹³ ten ci¹g
+- (! trudne) najd³u¿szy ci¹g gdzie orze³ i reszka wystêpuj¹ na zmianê (OROROROROROR)
+
+Zadanie 16
+Napisz funkcje szabonowe (podobne do tych z STL):
+a) Funkjcê która potrafi wype³niæ kontner n kolejnymi wartoœciami przekazanymi przez uzytkownika
+template <typename OutputIterator, typename SizeType, typename ValueType>
+void iota_n(OutputIterator dest, SizeType n, ValueType value)
+Co robi iota to mozemy sobie przypomnieæ tutaj: https://en.cppreference.com/w/cpp/algorithm/iota
+b) Funkcjê, która podobnie jak for_each wywo³a podan¹ funkcjê z tym ¿e nie dla ka¿dego elementu, a co n elementów
+template< class InputIt, class Size, class UnaryFunction >
+constexpr InputIt for_each_n( InputIt first, InputIt last, Size n, UnaryFunction f );
+
+Zadanie 17
+Utwórz klasê Employee (first_name, last_name, email, gender(enum!), salary, login, password ).
+Do obs³ugi pliku stwórz sobie klasy EmployeeFileReader, EmployeeFileWriter. Sproboj samemu je zaprojektowaæ.
+Dane wczytaj z pliku employee_input.csv.
+Jego struktura jest nastêpuj¹ca:
+first_name,last_name,email,gender,salary
+
+a) Dla ka¿dego pracownika wygeneruj unikalny login
+login powinien byc wygenerowany jako dwie pierwsze litery nazwiska i imienia, 
+a je¿eli ju¿ taki jest zajêty to dodajmy kolejne litery nazwiska, a¿ do uzyskania wolnego loginu,
+np: Roby Helian -> rohe
+Robert Hello -> rohel
+Rose Helian -> roheli
+Robert Helian -> rohelian1
+b) Wygeneruj dla ka¿dego pracownika losowe has³o sk³adaj¹ce siê z:
+- od 8-12 znaków (losowo)
+- przynajmniej 1 litery (me³e i duze), 1 cyfry i 1 znaku specjalnego (ze zbioru: !?@#$%&+=-)
+A nastêpnie zapisz do pliku passwords.csv loginy, adresy email i has³a w formacie:
+login,mail,password
+c)Wylicz statystyki:
+- Iloœæ osób o imieniu na ka¿d¹ z liter alfabetu
+- Iloœæ unikalnych imion, oraz najczêœciej wystêpuj¹ce imiê (lub imiona jeœli maj¹ tak¹ sam¹ czêstotliwoœæ)
+- Œrednie zarobki wszystkich pracowników, œrednie zarobki kobiet i mê¿czyzn
+d) Do pliku top10_salary.csv wypisz imiona, nazwiska i zarobki 10 najlepiej op³acanych osób
+a do pliku least10_salary.csv wypisz imiona, nazwiska i zarobki 10 najgorzej zarabiaj¹cych osób

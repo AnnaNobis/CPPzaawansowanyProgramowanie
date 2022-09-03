@@ -60,9 +60,8 @@ std::list<int> sortList(std::list<int> list)
     std::sort(evenNumbers.begin(), evenNumbers.end());
     std::sort(oddNumbers.rbegin(), oddNumbers.rend());
 
-    sortedList = evenNumbers.merge(oddNumbers);
-
-    return sortedList;
+   evenNumbers.splice(evenNumbers.end(), oddNumbers);
+    return evenNumbers;
 }
 
 
@@ -75,9 +74,9 @@ int main()
 
 
     std::cout << "Nastêpnie posortuj i wypisz listê tak, by na pocz¹tku znalaz³y siê wartoœci parzyste uporz¹dkowane rosn¹co, a za nimi wartoœci nieparzyste uporz¹dkowane malej¹co." << std::endl;
-    sortList(listOfNumbers);
+    std::list <int>secondList = sortList(listOfNumbers);
     
-    printList(listOfNumbers);
+    printList(secondList);
    
 
 
