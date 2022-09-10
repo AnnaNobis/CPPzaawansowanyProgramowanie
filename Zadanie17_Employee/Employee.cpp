@@ -25,10 +25,7 @@ std::string Employee::getEmail()
     return _email;
 }
 
-Employee::Gender Employee::getGender()
-{
-    return _gender;
-}
+
 
 double Employee::getSalary()
 {
@@ -47,17 +44,16 @@ std::string Employee::getPassword()
 
 Gender Employee::toGender(std::string str)
 {
-		if (str == "Female")
-		{
-			return Gender::FEMALE;
-		}
-		else if (str == "Male")
-		{
-			return Gender::MALE;
-		}
-		else
-		{
-			return Gender::UNKNOWN;
-		}
-
+	if (str == "Female")
+	{
+		return Gender::FEMALE;
+	}
+	else if (str == "Male")
+	{
+		return Gender::MALE;
+	}
+	else
+	{
+		return Gender::UNKNOWN;
+	}
 }

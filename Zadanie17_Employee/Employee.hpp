@@ -23,7 +23,7 @@ public:
 	std::string getName();
 	std::string getLastName();
 	std::string getEmail();
-	Employee::Gender getGender();
+
 	double getSalary();
 	std::string getLogin();
 	std::string getPassword();
@@ -59,7 +59,7 @@ private:
 	std::string _first_name;
 	std::string _last_name;
 	std::string _email;
-	Employee::Gender _gender;
+	Gender _gender;
 	double _salary;
 	std::string _login;
 	std::string _password;

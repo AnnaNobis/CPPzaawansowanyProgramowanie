@@ -49,5 +49,13 @@ namespace Zad
 		j = json{ {"firstName", s._firstName} , {"lastName", s._lastName} , {"studentID", s._studentID} };
 	}
 
+	void from_json(const json& j, Student& s)
+	{
+		s.setFirstName(j["firstName"].get<std::string>());
+		s.setLastName(j["lastName"]);
+		
+
+	}
+
 
 }
