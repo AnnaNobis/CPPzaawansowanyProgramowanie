@@ -12,14 +12,15 @@
 
 class Rectangle
 {
-	double a, b;
+	double _a, _b;
 
 public:
-
-	double area(double a, double b);
+	Rectangle(double a, double b);
+	double area();
 	bool isSquare();
-
-
+	double getSideA();
+	double getSideB();
+	double getArea();
 
 };
 

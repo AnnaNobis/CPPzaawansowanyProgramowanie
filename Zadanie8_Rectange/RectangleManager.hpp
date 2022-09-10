@@ -1,5 +1,8 @@
 #pragma once
 #include <vector>
+#include "RectangleGenerator.hpp"
+#include "RectangleManager.hpp"
+#include "Rectangle.hpp"
 
 //Utwórz wektor 100 prostok¹tów o losowych d³ugoœciach boków z przedzia³u 0, 10 (u¿yj liczb ca³kowitych)
 //a) void printRectangles() - Wypisz wszystkie prostok¹ty(for_each + unary function)
@@ -10,14 +13,18 @@
 
 class RectangleManager
 {
-    RectangleManager(int howMany)
-    {
-        RectangleGenerator rectGen(0, 10);
-        rectVect.push_back(rectGen.generateRect());
-    }
+public:
+    RectangleManager(int howMany);
+	void printRectangles();
+	size_t countRectangleBiggerThen(int area);
+	std::vector<Rectangle> getRectangles();
+	std::vector<Rectangle> copyRectangles();
+	bool printEachRectangles(Rectangle rect);
+
 private:
     std::vector<Rectangle> rectVect;
 
 
 };
 
+  

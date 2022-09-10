@@ -13,7 +13,7 @@ Rectangle RectangleGenerator::generateRect()
 {
 	int a = dist(engine);
 	int b = dist(engine);
-	Rectangle rect (a,b);
+	Rectangle rect(a,b);
 	return rect;
 }
 

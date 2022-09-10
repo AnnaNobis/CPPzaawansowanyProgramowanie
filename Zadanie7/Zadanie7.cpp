@@ -57,8 +57,8 @@ std::list<int> sortList(std::list<int> list)
         }
     }
 
-    std::sort(evenNumbers.begin(), evenNumbers.end());
-    std::sort(oddNumbers.rbegin(), oddNumbers.rend());
+    evenNumbers.sort(); 
+    oddNumbers.sort(std::greater<int>());
 
    evenNumbers.splice(evenNumbers.end(), oddNumbers);
     return evenNumbers;
